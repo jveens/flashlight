@@ -77,7 +77,7 @@
   bottom: 0;
   width: 108px;
   height: 96px;
-  background: url('images/gremlin-sprite1x.png') 0 0;
+  background: url('../images/gremlin-sprite1x.png') 0 0;
   -webkit-animation: walkLeft .7s steps(2) infinite, moveGremlin 60s steps(100) infinite; }
 
 @-webkit-keyframes walkRight {

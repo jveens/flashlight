@@ -84,8 +84,8 @@
 	bottom: 0;
 	width: 108px;
 	height: 96px;
-	background: url('images/gremlin-sprite1x.png') 0 0;
-	-webkit-animation: walkLeft .7s steps(2) infinite, moveGremlin 60s steps(100) infinite;
+	background: url('../images/gremlin-sprite1x.png') 0 0;
+	-webkit-animation: walkLeft .7s steps(2) infinite, moveGremlin 5s steps(100) infinite;
 
 	// &:hover {
 	// 	background: url('images/gremlin-sprite1x.png') 108px 0; 
@@ -104,11 +104,12 @@
 }
 
 @-webkit-keyframes surprise {
-	100% 	{ background-position: 4320px 0}
+	100% 	{ background-position: 432px 0}
 }
 
 @-webkit-keyframes moveGremlin {
 	0% 		{left: 0;}
-	50%		{left: 100%;}
+	50%		{left: 100%;
+			 transform: rotateY(180deg)}
 	100%	{left: 0;}
 }
