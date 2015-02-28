@@ -5,22 +5,20 @@
 
 .lightSwitch {
 	position: fixed;
-	top: 10px;
-	right: 10px;
+	top: 20px;
+	left: 20px;
 	// background-color: rgba(232, 255, 135, 0.2);
 	background-color: #222;
 	height: 38px;
 	width: 80px;
 	border-radius: 30px;
 	// border: 3px solid #222222;
-	border: 2px solid transparent;	
 	transition: all 0.3s;
 }
 
 .turntOff {
 	// background: rgba(224,255,95, 0.9);
-	background: #fff;
-	border: 2px solid black;
+	background: silver;
 	// box-shadow: 0 0 3px 2px rgba(224, 255, 95 ,0.4);
 }
 
@@ -39,9 +37,12 @@
 	content: "ON";
 	position: absolute;
 	font-family: sans-serif;
-	top: 8px;
-	left: 39px;
+	top: 5px;
+	left: 36px;
 	color: #fff;
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
 }
 
 .on {
@@ -53,10 +54,13 @@
 	content: "OFF";
 	color: #222;
 	position: absolute;
-	left: -38px;
-	top: 8px;
+	left: -34px;
+	top: 5px;
 	font-family: sans-serif;
 	-webkit-animation: fadeIn 0.3s;
+	font-family: 'Droid Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
 }
 
 @-webkit-keyframes fadeIn {
@@ -73,29 +77,61 @@
 	width: 120px;
 	height: 120px;
 	background-color: rgba(255,228,181,0.1);
-	box-shadow: 0 0 30px 2000px rgba(0,0,0,0.87);
 	border-radius: 50%;
 	box-sizing: none;
+	pointer-events: none;
+}
+.shadow {
+	box-shadow: 0 0 0 20000px rgba(0,0,0,0.75);
 }
 
 .gremlin {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 108px;
 	height: 96px;
 	background: url('../images/gremlin-sprite1x.png') 0 0;
-	-webkit-animation: walkLeft .7s steps(2) infinite, moveGremlin 60s steps(100) infinite;
 
-	// &:hover {
-	// 	background: url('images/gremlin-sprite1x.png') 108px 0; 
-	// }
 }
 
-// .gremlin animations
-@-webkit-keyframes walkRight {
-	0% 		{ background-position: 216px 0;}
-	100% 	{ background-position: 432px 0;}
+.gremlinMove {
+	-webkit-animation:
+	 walkLeft .2s steps(2) infinite, 
+	 moveGremlin 15s steps(100) infinite;
+}
+
+.mask {
+	display: absolute;
+	width: 108px;
+	height: 96px;
+	background: url('../images/gremlin-sprite1x.png') 108px 0;
+
+}
+
+.maskBg {
+	display: absolute;
+	width: 108px;
+	height: 108px;
+	background: rgb(176,196,222);
+}
+
+.gremlinMove {
+	&:hover .mask,
+	&:hover .maskBg {
+		display: block;
+	}
+}
+
+// .mask {
+// 	&:hover .gremlin {
+// 		opacity: 0;
+// 	}
+// }
+
+.paused {
+	-webkit-animation-play-state: paused;
+	// background: url('../images/gremlin-sprite1x.png') 108px 0;
 }
 
 @-webkit-keyframes walkLeft {
@@ -103,8 +139,13 @@
 	100% 	{ background-position: 108px 0;}
 }
 
+@-webkit-keyframes walkRight {
+	0% 		{ background-position: 540px 0;}
+	100% 	{ background-position: 540px 0;}
+}
 @-webkit-keyframes surprise {
-	100% 	{ background-position: 432px 0}
+	0% 		{ background-position: 432px 0;}
+	100% 	{ background-position: 540px 0;}
 }
 
 @-webkit-keyframes moveGremlin {

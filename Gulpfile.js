@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	reload = browserSync.reload;
 
-gulp.task('default', ['browserSync', 'styles', 'jshint']);
+gulp.task('default', ['browserSync', 'styles', 'jshint', 'watch']);
 
 gulp.task('styles', function(){
 	gulp.src('style/*.scss')
