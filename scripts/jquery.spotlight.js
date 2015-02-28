@@ -12,7 +12,7 @@ $.fn.spotlight = function(width, darkness) {
 	$('.show').css({ boxShadow: '0 0 20000px' + shadow })
 	
 		console.log(shadow);
-		// $('.shadow').css({ boxShadow: '1px 3px 6px' + shadow })
+		$('.shadow').css({ boxShadow: '1px 3px 6px' + shadow });
 
 	// toggle .spotlight with .lightSwitch
 	$(lightSwitch).on('click', function(event) {
@@ -21,14 +21,10 @@ $.fn.spotlight = function(width, darkness) {
 
 	// when lightswtich 'on' add an overlay div "spotlight"	
 	// when lightswitch 'off' remove overlay div
-		$('.spotLight').toggleClass('show').width(width).height(width);
+		$('.spotLight').toggleClass('show shadow').width(width).height(width);
 		$('.lightSwitch').toggleClass('turntOff');
 		$('.toggle').toggleClass('on');
 		$('.monster').toggleClass('gremlin gremlinMove');
-
-
-
-
 
 		var setWidth = $('.show').width();
 		var offset = setWidth/2;
@@ -41,7 +37,10 @@ $.fn.spotlight = function(width, darkness) {
 				// console.log(mouseX, mouseY);
 
 			// set the coordinates of .spotLight to be the same as the mouse (plus the height/width offset)
-				$('.show').css("top", mouseY).css("left", mouseX).css('transform', 'translate(-'+ offset + 'px , -' + offset + 'px)');
+				$('.show').css({ 
+					 top: mouseY, 
+					 left: mouseX, 
+					 transform: 'translate(-'+ offset + 'px , -' + offset + 'px)'});
 		
 		}); // end mousemove
 

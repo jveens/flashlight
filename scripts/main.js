@@ -1,3 +1,3 @@
 $(function() {
-	$('body').spotlight(300, 1);
+	$('body').spotlight(300, .5);
 });
