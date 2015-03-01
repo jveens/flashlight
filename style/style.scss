@@ -17,15 +17,13 @@
 }
 
 .turntOff {
-	// background: rgba(224,255,95, 0.9);
 	background: silver;
-	// box-shadow: 0 0 3px 2px rgba(224, 255, 95 ,0.4);
 }
 
 .toggle {
 	position: absolute;
-	height: 28px;
-	width: 28px;
+	height: 27px;
+	width: 27px;
 	top: 5px;
 	left: 5px;
 	border-radius: 50%;
@@ -63,12 +61,6 @@
 	font-size: 1.5rem;
 }
 
-@-webkit-keyframes fadeIn {
-	0% { color: white;}
-	30% { color: white;}
-	100% { color: black}
-}
-
 
 .show {
 	position: absolute;
@@ -80,55 +72,46 @@
 	border-radius: 50%;
 	box-sizing: none;
 	pointer-events: none;
-}
+} 
 
-.gremlin {
-	position: fixed;
+// .gremlin {
+// 	position: fixed;
+// 	left: 0;
+// 	bottom: 0;
+// 	width: 108px;
+// 	height: 96px;
+// }
+
+.gremlinStep {
+	-webkit-animation: walkLeft .2s steps(2) infinite;
+	background: url('../images/gremlin-sprite1x.png') 0 0;
 	left: 0;
-	bottom: 0;
+	top: 0;
 	width: 108px;
 	height: 96px;
-	background: url('../images/gremlin-sprite1x.png') 0 0;
-
 }
 
-.gremlinMove {
-	-webkit-animation:
-	 walkLeft .2s steps(2) infinite, 
-	 moveGremlin 15s steps(100) infinite;
+.holder {
+	-webkit-animation: moveGremlin 15s linear infinite;
+	width: 108px;
+	height: 96px;
+	border: 1px solid red;
 }
 
-.mask {
-	display: absolute;
+.gremlinSlide {
+	width: 108px;
+	height: 96px;
+	position: absolute;
+}
+
+.gremlinSurprise {
 	width: 108px;
 	height: 96px;
 	background: url('../images/gremlin-sprite1x.png') 108px 0;
-
 }
-
-.maskBg {
-	display: absolute;
-	width: 108px;
-	height: 108px;
-	background: rgb(176,196,222);
-}
-
-.gremlinMove {
-	&:hover .mask,
-	&:hover .maskBg {
-		display: block;
-	}
-}
-
-// .mask {
-// 	&:hover .gremlin {
-// 		opacity: 0;
-// 	}
-// }
 
 .paused {
 	-webkit-animation-play-state: paused;
-	// background: url('../images/gremlin-sprite1x.png') 108px 0;
 }
 
 @-webkit-keyframes walkLeft {
@@ -136,21 +119,12 @@
 	100% 	{ background-position: 108px 0;}
 }
 
-@-webkit-keyframes walkRight {
-	0% 		{ background-position: 540px 0;}
-	100% 	{ background-position: 540px 0;}
-}
-@-webkit-keyframes surprise {
-	0% 		{ background-position: 432px 0;}
-	100% 	{ background-position: 540px 0;}
-}
-
 @-webkit-keyframes moveGremlin {
 	0% 		{left: -10%;}
-	49%		{transform: rotateY(0deg)}
+	49%		{transform: rotateY(0deg);}
 	50%		{left: 100%;
-			 transform: rotateY(180deg)}
-	99%		{transform: rotateY(180deg)}
+			 transform: rotateY(180deg);}
+	99%		{transform: rotateY(180deg);}
 	100%	{left: -10%;
-			 transform: rotateY(0deg)}
+			 transform: rotateY(0deg);}
 }

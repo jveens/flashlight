@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQuery Spotlight</title>
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/style.css"/>
 	<link rel="stylesheet" href="style/main.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -12,23 +12,48 @@
 	<script src="scripts/main.js"></script>
 </head>
 <body>
-	<header>
-		<div class="hero">
-			<h1>jquery.Spotlight.js</h1>
-		</div>
-	</header>
-	<main>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi deleniti fugit architecto? Earum dignissimos eos quo, natus adipisci velit sequi voluptatem, laboriosam, officia voluptatibus et.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corrupti, architecto delectus iste et deserunt amet voluptatum! Voluptatum accusantium quidem deleniti beatae, quos recusandae neque.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio totam excepturi nihil, vero corporis magni minima commodi repellat ad eum a qui minus harum recusandae.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores totam magni pariatur doloribus, dicta deserunt aperiam asperiores saepe qui quidem cupiditate debitis dolorum reiciendis rem.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam non sequi commodi fugiat doloribus perspiciatis, atque accusamus possimus dolores, saepe amet deleniti doloremque nemo ad.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iure, esse! Ad, placeat a, eveniet illum, sapiente eos dolorum unde non consectetur ratione vel dolores.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, corporis, in. Explicabo similique perspiciatis, delectus ad voluptatum quae cumque error nisi iste quaerat, molestias ab.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sunt magnam, necessitatibus, reiciendis, non explicabo aperiam quia magni fugit distinctio saepe. Molestiae consectetur quasi ipsa.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime fugit harum laboriosam perferendis, sed consequatur modi, magni rem fuga ullam tempora. Eum earum blanditiis ad.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quisquam esse eum error iste ducimus repellendus eveniet possimus aliquam quam distinctio voluptatum, recusandae nam quas.</p>
-	</main>
-	<footer></footer>
+	<div class="wrapper">
+		<header>
+			<div class="hero">
+				<h1>HideNSeek.js</h1>
+				<h5>A jQuery plugin</h5>
+			</div><!-- end .hero -->
+		</header>
+		<main>
+			<div class="innerWrapper">
+				<h3>What it is:</h3>
+				<p>An interactive jQuery plugin, HideNSeek.js lets users turn the lights out and explore your site using a flashlight. But be careful while you're looking around, when the lights are off, the monsters come out... </p>
+
+				<h3>How to use it:</h3>
+				<p>1. Include the 'hidenseek.js' file in your scripts folder.</p>
+				<p>2. Link the 'hidenseek.js' script to your HTML file. </p>
+				<p>3a. In your main javascript file, call the function: </p>
+				<p>3b. 'hidenseek.js' accepts 3 values as follows:</p>
+				<table>
+					<tr>
+						<th>Parameter</th>
+						<th>Format</th>
+						<th>Notes</th>
+					</tr>
+					<tr>
+						<td>Flashlight Size</td>
+						<td>Any integer with a positive value</td>
+						<td>Determines the diameter of the flashlight in pixels.</td>
+					</tr>
+					<tr>
+						<td>Darkness</td>
+						<td>Value between 0-1</td>
+						<td>Determines the opacity of the flashlight shadow.</td>
+					</tr>
+					<tr>
+						<td>Gremlins</td>
+						<td>Boolean</td>
+						<td>If true, a gremlin will live on the page when the lights are turned off.</td>
+					</tr>
+				</table>
+			</div><!-- end .innerWrapper -->
+		</main>
+		<footer></footer>
+	</div><!-- end .wrapper -->
 </body>
 </html>

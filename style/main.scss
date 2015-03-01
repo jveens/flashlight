@@ -5,39 +5,74 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-$softyellow : rgba(245,214,35,1);
+@font-face {
+	font-family: 'Hallo Sans';
+	src: url('../Hallo sans.otf');
+}
 
 @mixin verticalMiddle {
 	position: relative;
-	top: 50%;
+	top: 40%;
 	transform: translateY(-50%);
+}
+
+h3 {
+	font-family: 'Muli', sans-serif;
+	font-size: 4rem;
+}
+
+p {
+	font-size: 2rem;
+}
+
+table {
+	font-size: 2rem;
+	margin-bottom: 100px;
+
+	th,
+	td {
+		border: 1px solid black;
+		padding: 10px;
+	}
 }
 
 html {
 	font-size: 62.5%;
 	height: 100%;
+	background: rgba(118,170,230,1);
 
 	body {
 		height: 100%;
 
-		header {
-			height: 100%;
-			background-color: rgb(176,196,222);
+		.wrapper {
+			height: 100%;	
 		}
 	}
 }
 
 header {
+	height: 100%;
+
 	.hero {
+		height: 100%;
 		text-align: center;
 		font-size: 5rem;
-		position: relative;
-		top: 45%;
-		transform: translateY(-50%);
 		padding: 5%;
+		color: #222;
+		line-height: 166px;
+		text-shadow: 5px 3px 4px rgba(255,255,255,0.64);
 
-		h2 {
-			font-size: 3rem;
+		h1 {
+		position: relative;
+		top: 40%;
+		transform: translateY(-80%);
+		font-family: 'Muli', sans-serif;
 		}
 	}
+}
+
+
+.innerWrapper {
+	max-width: 1000px;
+	margin: 0 auto;
 }
