@@ -97,4 +97,56 @@ pre {
 	word-wrap: break-word;
 	font-size: 2rem;
 	padding: 15px;
+
+	&:last-child {
+		margin-bottom: 60px;
+	}
+}
+
+.github {
+		background-color: #655869;
+		padding: 10px;
+		width: 100%;
+		text-align: center;
+
+		p {
+			display: inline-block;
+			padding: 0 20px 10px 0;
+			font-size: 2.5rem;
+		}
+
+		a {
+			color: black;
+		}
+
+		img {
+			position: relative;
+			transform: translateY(20%);
+			padding-top: 5px;
+			transition: all 0.3s;
+		}
+	}
+
+footer {
+	background-color: black;
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+	padding: 40px;
+	font-weight: 300;
+	font-family: 'Didact Gothic', sans-serif;
+
+
+
+	a {
+		color: white;
+		text-decoration: none;
+		transition: all 0.3s;
+
+
+		&:hover {
+			transform: scale(1.2);
+			color: red;
+		}
+	}
 }
