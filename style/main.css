@@ -165,7 +165,7 @@ header {
     height: 100%;
     text-align: left;
     font-size: 5rem;
-    padding: 5% 22%;
+    padding: 5% 20%;
     background: #4A4A4A;
     background-image: -webkit-linear-gradient(269deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.42) 100%);
     background-image: linear-gradient(-179deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.42) 100%); }
