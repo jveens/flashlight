@@ -1,0 +1,24 @@
+{
+  "name": "jquery.flashlight.js",
+  "version": "1.0.0",
+  "description": "A jQuery plugin to turn the lights off on your site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jQuery",
+    "plugin",
+    "flashlight",
+    "gremlin"
+  ],
+  "author": "Jenny Veens",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.2.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-sass": "^1.3.3"
+  }
+}
