@@ -4,31 +4,43 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQuery Spotlight</title>
-	<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/style.css"/>
 	<link rel="stylesheet" href="style/main.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="scripts/jquery.spotlight.js"></script>
+	<script src="scripts/jquery.flashlight.js"></script>
 	<script src="scripts/main.js"></script>
 </head>
 <body>
 	<div class="wrapper">
 		<header>
 			<div class="hero">
-				<h1>HideNSeek.js</h1>
-				<h5>A jQuery plugin</h5>
+				<h1>Flashlight.js</h1>
+				<h5>An interactive jQuery plugin that lets you turn out the lights.</h5>
 			</div><!-- end .hero -->
 		</header>
 		<main>
 			<div class="innerWrapper">
 				<h3>What it is:</h3>
-				<p>An interactive jQuery plugin, HideNSeek.js lets users turn the lights out and explore your site using a flashlight. But be careful while you're looking around, when the lights are off, the monsters come out... </p>
+				<p>An interactive jQuery plugin, flashlight.js lets users turn the lights out and explore your site using a flashlight. But be careful while you're looking around, when the lights are off, the monsters come out... </p>
 
 				<h3>How to use it:</h3>
-				<p>1. Include the 'hidenseek.js' file in your scripts folder.</p>
-				<p>2. Link the 'hidenseek.js' script to your HTML file. </p>
-				<p>3a. In your main javascript file, call the function: </p>
-				<p>3b. 'hidenseek.js' accepts 3 values as follows:</p>
+				<p>1. Include the 'jquery.flashlight.js' file in your scripts folder.</p>
+				
+				<p>2. Link the 'flashlight.js' script to your HTML file. </p>
+
+				<div class="code">
+					<pre>
+						<code>
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/<wbr>jquery.min.js"></script>
+<br>
+&lt;script src="scripts/jquery.flashlight.js"></script>
+						</code>
+					</pre>
+				</div>
+
+
+				<p>3. 'flashlight.js' accepts 3 values as follows:</p>
 				<table>
 					<tr>
 						<th>Parameter</th>
@@ -36,24 +48,38 @@
 						<th>Notes</th>
 					</tr>
 					<tr>
-						<td>Flashlight Size</td>
+						<td>Flashlight</td>
 						<td>Any integer with a positive value</td>
-						<td>Determines the diameter of the flashlight in pixels.</td>
+						<td>Determines the diameter of the flashlight beam in pixels.</td>
 					</tr>
 					<tr>
 						<td>Darkness</td>
-						<td>Value between 0-1</td>
+						<td>Any value 0-1</td>
 						<td>Determines the opacity of the flashlight shadow.</td>
 					</tr>
 					<tr>
-						<td>Gremlins</td>
+						<td>Gremlin</td>
 						<td>Boolean</td>
 						<td>If true, a gremlin will live on the page when the lights are turned off.</td>
 					</tr>
 				</table>
+				<p>4. In your main javascript file, call the function: </p>
+
+				<div class="code">
+					<pre>
+						<code>
+$(function() {
+	$('body').flashlight(flashlight, darkness, gremlin);
+});
+						</code>
+					</pre>
+				</div>
+
 			</div><!-- end .innerWrapper -->
 		</main>
-		<footer></footer>
+		<footer>
+			Made with &hearts; by Jenny. Gremlin by Peter. 
+		</footer>
 	</div><!-- end .wrapper -->
 </body>
 </html>

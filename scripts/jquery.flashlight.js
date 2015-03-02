@@ -1,12 +1,17 @@
-$.fn.flashlight = function(width, darkness) {
+$.fn.flashlight = function(width, darkness, gremlin) {
 
 	// put lightswitch on the page
 	var lightSwitch = $('<div><div class="toggle off">').addClass('lightSwitch');
 	var spotLight = $('<div>').addClass('spotLight');
-	var monster = $('<div>').addClass('monster');
+	var monster = $('<div>').addClass('monster monsterHide');
 	var holder = $('<div>').addClass('holder').append(monster);
 
-	$('body').append(holder, spotLight, lightSwitch);
+	if (gremlin == true ) {
+		$('body').append(holder, spotLight, lightSwitch);
+	}
+	else {
+		$('body').append(spotLight, lightSwitch);
+	}
 
 	var shadow = 'rgba(0,0,0,' + darkness + ')';
 	$('.show').css({ boxShadow: '0 0 0 20px ' + shadow});
@@ -22,11 +27,13 @@ $.fn.flashlight = function(width, darkness) {
 		$('.spotLight').toggleClass('show').width(width).height(width);
 		$('.lightSwitch').toggleClass('turntOff');
 		$('.toggle').toggleClass('on');
-		$('.monster').toggleClass('gremlinStep');
+		$('.monster').toggleClass('gremlinStep monsterHide');
 		$('.show').css({ boxShadow: '0 0 0 20px ' + shadow});
+		$('.holder').addClass('gremlinSlide');
 
 		if ( $('.lightSwitch').hasClass('turntOff')===true ) {
 			$('.show').css({ boxShadow: '0 0 0 20000px ' + shadow});
+			$('.holder').addClass('gremlinSlide');
 		}
 		else {
 			$('.spotLight').css({ boxShadow: '0 0 0 0 transparent'});

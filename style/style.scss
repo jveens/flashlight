@@ -1,6 +1,7 @@
 .html {
 	width: 100%;
 	overflow: none;
+	position: relative;
 }
 
 .lightSwitch {
@@ -9,8 +10,8 @@
 	left: 20px;
 	// background-color: rgba(232, 255, 135, 0.2);
 	background-color: #222;
-	height: 38px;
-	width: 80px;
+	height: 57px;
+	width: 120px;
 	border-radius: 30px;
 	// border: 3px solid #222222;
 	transition: all 0.3s;
@@ -22,10 +23,10 @@
 
 .toggle {
 	position: absolute;
-	height: 27px;
-	width: 27px;
-	top: 5px;
-	left: 5px;
+	height: 38px;
+	width: 38px;
+	top: 10px;
+	left: 12px;
 	border-radius: 50%;
 	transition: all 0.3s;
 	background-color: #fff;	
@@ -35,30 +36,34 @@
 	content: "ON";
 	position: absolute;
 	font-family: sans-serif;
-	top: 5px;
-	left: 36px;
+	top: 4.5px;
+	left: 50px;
 	color: #fff;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Didact Gothic', sans-serif;
 	font-weight: 700;
-	font-size: 1.5rem;
+	letter-spacing: 2px;
+	font-size: 2rem;
+	text-shadow: 0 0 20px rgba(143, 255, 21, 1), 0 0 15px rgba(143,255,21,0.9);
 }
 
 .on {
-	left: 45px;
+	left: 70px;
 	background: #000;
 }
 
 .on:before {
 	content: "OFF";
-	color: #222;
+	color: #fff;
 	position: absolute;
-	left: -34px;
-	top: 5px;
+	left: -50px;
+	top: 4.5px;
 	font-family: sans-serif;
 	-webkit-animation: fadeIn 0.3s;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Didact Gothic', sans-serif;
 	font-weight: 700;
-	font-size: 1.5rem;
+	font-size: 2rem;
+		letter-spacing: 2px;
+	text-shadow: 0 0 10px rgba(245, 26, 26, 1), 0 0 5px rgba(245,26,26,0.8);
 }
 
 
@@ -74,19 +79,21 @@
 	pointer-events: none;
 } 
 
-// .gremlin {
-// 	position: fixed;
-// 	left: 0;
-// 	bottom: 0;
-// 	width: 108px;
-// 	height: 96px;
-// }
+.monster {
+	left: 0;
+	bottom: 0;
+	width: 108px;
+	height: 96px;
+	position: fixed;
+}
+
+.monsterHide {
+	display: none;
+}
 
 .gremlinStep {
 	-webkit-animation: walkLeft .2s steps(2) infinite;
 	background: url('../images/gremlin-sprite1x.png') 0 0;
-	left: 0;
-	top: 0;
 	width: 108px;
 	height: 96px;
 }
@@ -95,13 +102,14 @@
 	-webkit-animation: moveGremlin 15s linear infinite;
 	width: 108px;
 	height: 96px;
-	border: 1px solid red;
+	bottom: 0;
+	left: 0;
+	position: fixed;
 }
 
 .gremlinSlide {
 	width: 108px;
 	height: 96px;
-	position: absolute;
 }
 
 .gremlinSurprise {
@@ -115,7 +123,7 @@
 }
 
 @-webkit-keyframes walkLeft {
-	0% 		{ background-position: 324px 0;}
+	0% 		{ background-position: 320px 0;}
 	100% 	{ background-position: 108px 0;}
 }
 
