@@ -20,7 +20,7 @@ html {
 
 	body {
 		height: 100%;
-
+		overflow-x: hidden;
 		.wrapper {
 			height: 100%;	
 		}
@@ -62,10 +62,12 @@ h2, h3 {
 	font-size: 3rem;
 }
 
+
 h3 {
 	text-decoration: underline;
 	line-height: 4rem;
 	color: black;
+	margin: 30px 0 15px;
 }
 
 p {
@@ -123,12 +125,17 @@ header {
 
 .heroText {
 	margin: 0 auto 20px;
-	width: 80%;
+	max-width: 80%;
+}
+
+.shine-word {
+	font-size: 22vh;
 }
 
 .innerWrapper {
 	max-width: 800px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 .code {
@@ -140,14 +147,18 @@ header {
 pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
-	font-size: 2rem;
-	padding: 15px;
+	font-size: 1.5rem;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
 
 	&:last-child {
 		margin-bottom: 60px;
 	}
 }
-
+code[class*="language-"] {
+	line-height: 1.2;
+}
 .github {
 		background-color: #655869;
 		padding: 10px;
@@ -172,26 +183,56 @@ pre {
 		}
 	}
 
+ul {
+	padding: 10;
+
+	li {
+		font-family: $text;
+		font-size: 2rem;
+		font-weight: 200;
+		padding: 5px;
+
+		a {
+			font-weight: bold;
+			text-decoration: none;
+			font-style: italic;
+			// font-variant: small-caps;
+			color: black;
+
+			&:hover {
+				color: lighten(black,50%);
+			}
+		}
+	}
+}
+
 footer {
-	background-color: black;
 	text-align: center;
 	font-size: 2rem;
 	color: white;
 	padding: 40px;
 	font-weight: 300;
 	font-family: 'Didact Gothic', sans-serif;
-
-
-
+	p {
+		color: black;
+	}
 	a {
-		color: white;
+		color: red;
 		text-decoration: none;
 		transition: all 0.3s;
-
 
 		&:hover {
 			transform: scale(1.2);
 			color: red;
 		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.shine-word {
+	font-size: 7vh;
+	}
+	h2 {
+		font-size: 2rem;
 	}
 }

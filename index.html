@@ -7,6 +7,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/style.css"/>
 	<link rel="stylesheet" href="style/main.css"/>
+	<link rel="stylesheet" href="style/prism.css"/>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -18,8 +19,8 @@
 				<div class="heroText">
 					<h1 id="shine">Flashlight.js</h1>
 					<h2>An interactive jQuery plugin that lets you turn out the lights.</h2>
-					<i id="icon1" class="fa fa-github-alt fa-5x"></i>
-					<i id="icon2" class="fa fa-twitter fa-5x"></i>
+					<a href="https://github.com/jveens/jquery-flashlight-plugin"><i id="icon1" class="fa fa-github-alt fa-5x"></i></a>
+					<a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&text=jQuery%20Flashlight.js&tw_p=tweetbutton&url=https%3A%2F%2Fgithub.com%2Fjveens%2Fjquery-flashlight-plugin&via=jennyveens"><i id="icon2" class="fa fa-twitter fa-5x"></i></a>
 				</div>
 			</div><!-- end .hero -->
 		</header>
@@ -33,7 +34,6 @@
 					<li>Customizable flashlight beam and shadow</li>
 					<li>Optional gremlin</li>
 					<li>Fully customizable lightswitch</li>
-					<li>Works in browsers that support box-shadow</li>
 				</ul>
 
 				<h3>How to use it:</h3>
@@ -42,13 +42,13 @@
 				<p>2. Link the 'flashlight.js' script to your HTML file. </p>
 
 				<div class="code">
-					<pre>
-						<code>
+<pre>
+<code class="language-markup">
 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/<wbr>jquery.min.js"></script>
 <br>
 &lt;script src="scripts/jquery.flashlight.js"></script>
-						</code>
-					</pre>
+</code>
+</pre>
 				</div>
 
 
@@ -80,35 +80,45 @@
 				<p>4. In your main javascript file, call the function: </p>
 
 				<div class="code">
-					<pre>
-						<code>
+<pre>
+<code class="language-javascript">
 $(function() {
-	$('body').flashlight(flashlight, darkness, gremlin);
+$('body').flashlight(flashlight, darkness, gremlin);
 });
-						</code>
-					</pre>
+</code>
+</pre>
 				</div>
+				<h3>Credits:</h3>
+					<ul>
+						<li>Code by <a href="http://twitter.com/jennyveens">Jenny</a></li>
+						<li>Gremlin by <a href="http://twitter.com/cameroncodes">Peter</a></li>
+						<li>Shadows by <a href="http://bigspaceship.github.io/shine.js/">Shine.js</a></li>
+					</ul>
 
 			</div><!-- end .innerWrapper -->
 		</main>
 
 		<footer>
-
-			<p>Made with &hearts; by <a href="http://twitter.com/jennyveens">Jenny</a>. Gremlin by <a href="http://twitter.com/cameroncodes">Peter</a>.</p>
-
+<!-- 
+			<p>Made with &hearts; by <a href="http://twitter.com/jennyveens">Me</a></p>
+ -->
 		</footer>
 	</div><!-- end .wrapper -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="scripts/shine.min.js"></script>
 	<script src="scripts/jquery.flashlight.js"></script>
+	<script src="scripts/prism.js"></script>
 	<script src="scripts/main.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="jquery.fittext.js"></script>
+	<!-- 
+	<script src="script/jquery.fittext.js"></script>
 	<script>
-	  jQuery("#shine").fitText();
+	  $(function() {
+	  	jQuery("#shine").fitText();
+	  });
 	</script>
+
+	-->
 
 
 </body>
