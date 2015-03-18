@@ -160,28 +160,28 @@ code[class*="language-"] {
 	line-height: 1.2;
 }
 .github {
-		background-color: #655869;
-		padding: 10px;
-		width: 100%;
-		text-align: center;
+	background-color: #655869;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
 
-		p {
-			display: inline-block;
-			padding: 0 20px 10px 0;
-			font-size: 2.5rem;
-		}
-
-		a {
-			color: black;
-		}
-
-		img {
-			position: relative;
-			transform: translateY(20%);
-			padding-top: 5px;
-			transition: all 0.3s;
-		}
+	p {
+		display: inline-block;
+		padding: 0 20px 10px 0;
+		font-size: 2.5rem;
 	}
+
+	a {
+		color: black;
+	}
+
+	img {
+		position: relative;
+		transform: translateY(20%);
+		padding-top: 5px;
+		transition: all 0.3s;
+	}
+}
 
 ul {
 	padding: 10;

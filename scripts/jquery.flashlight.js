@@ -44,14 +44,15 @@ $.fn.flashlight = function(width, darkness, gremlin) {
 
 		$(window).on('mousemove', function(event) {
 			// grab the coordinates of the mouse
-				var mouseX = event.pageX;
-				var mouseY = event.pageY;
+			var mouseX = event.pageX;
+			var mouseY = event.pageY;
 
 			// set the coordinates of .spotLight to be the same as the mouse (plus the height/width offset)
-				$('.show').css({ 
-					 top: mouseY, 
-					 left: mouseX, 
-					 transform: 'translate(-'+ offset + 'px , -' + offset + 'px)'});
+			$('.show').css({ 
+				top: mouseY, 
+				left: mouseX, 
+				transform: 'translate(-'+ offset + 'px , -' + offset + 'px)'
+			});
 		
 		}); // end mousemove
 
