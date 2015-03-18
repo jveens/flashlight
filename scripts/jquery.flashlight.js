@@ -6,7 +6,7 @@ $.fn.flashlight = function(width, darkness, gremlin) {
 	var monster = $('<div>').addClass('monster monsterHide');
 	var holder = $('<div>').addClass('holder').append(monster);
 
-	if (gremlin == true ) {
+	if (gremlin === true ) {
 		$('body').append(holder, spotLight, lightSwitch);
 	}
 	else {
@@ -15,7 +15,6 @@ $.fn.flashlight = function(width, darkness, gremlin) {
 
 	var shadow = 'rgba(0,0,0,' + darkness + ')';
 	$('.show').css({ boxShadow: '0 0 0 20px ' + shadow});
-		console.log(shadow);
 
 	// toggle .spotlight with .lightSwitch
 	$(lightSwitch).on('click', function(event) {
@@ -30,8 +29,9 @@ $.fn.flashlight = function(width, darkness, gremlin) {
 		$('.monster').toggleClass('gremlinStep monsterHide');
 		$('.show').css({ boxShadow: '0 0 0 20px ' + shadow});
 		$('.holder').addClass('gremlinSlide');
+		// $('.title').toggleID('shine');
 
-		if ( $('.lightSwitch').hasClass('turntOff')===true ) {
+		if ( $('.lightSwitch').hasClass('turntOff')) {
 			$('.show').css({ boxShadow: '0 0 0 20000px ' + shadow});
 			$('.holder').addClass('gremlinSlide');
 		}
@@ -39,15 +39,13 @@ $.fn.flashlight = function(width, darkness, gremlin) {
 			$('.spotLight').css({ boxShadow: '0 0 0 0 transparent'});
 		}
 
-		var setWidth = $('.show').width();
-		var offset = setWidth/2;
+		// Set mouse offset
+		var offset = width/2;
 
 		$(window).on('mousemove', function(event) {
 			// grab the coordinates of the mouse
 				var mouseX = event.pageX;
 				var mouseY = event.pageY;
-
-				// console.log(mouseX, mouseY);
 
 			// set the coordinates of .spotLight to be the same as the mouse (plus the height/width offset)
 				$('.show').css({ 
@@ -69,6 +67,6 @@ $.fn.flashlight = function(width, darkness, gremlin) {
 			$('.monster').removeClass('gremlinSurprise').addClass('gremlinStep');
 		});
 
-	} // end lightSwitch click
+	}); // end lightSwitch click
 
-)}; // end spotLight fn()
+}; // end spotLight fn()

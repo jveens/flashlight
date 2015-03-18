@@ -7,22 +7,34 @@
 	<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style/style.css"/>
 	<link rel="stylesheet" href="style/main.css"/>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="scripts/jquery.flashlight.js"></script>
-	<script src="scripts/main.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<div class="wrapper">
 		<header>
 			<div class="hero">
-				<h1>Flashlight.js</h1>
-				<h5>An interactive jQuery plugin that lets you turn out the lights.</h5>
+				<div class="heroText">
+					<h1 id="shine">Flashlight.js</h1>
+					<h2>An interactive jQuery plugin that lets you turn out the lights.</h2>
+					<i id="icon1" class="fa fa-github-alt fa-5x"></i>
+					<i id="icon2" class="fa fa-twitter fa-5x"></i>
+				</div>
 			</div><!-- end .hero -->
 		</header>
 		<main>
 			<div class="innerWrapper">
 				<h3>What it is:</h3>
 				<p>An interactive jQuery plugin, flashlight.js lets users turn the lights out and explore your site using a flashlight. But be careful while you're looking around, when the lights are off, the monsters come out... </p>
+
+				<h3>Features:</h3>
+				<ul>
+					<li>Customizable flashlight beam and shadow</li>
+					<li>Optional gremlin</li>
+					<li>Fully customizable lightswitch</li>
+					<li>Works in browsers that support box-shadow</li>
+				</ul>
 
 				<h3>How to use it:</h3>
 				<p>1. Include the 'jquery.flashlight.js' file in your scripts folder.</p>
@@ -80,16 +92,20 @@ $(function() {
 			</div><!-- end .innerWrapper -->
 		</main>
 
-		<section class="github">
-			<a href="https://github.com/jveens/jquery-flashlight-plugin">
-				<p>View it on GitHub</p>
-				<img src="images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
-			</section>
 		<footer>
 
 			<p>Made with &hearts; by <a href="http://twitter.com/jennyveens">Jenny</a>. Gremlin by <a href="http://twitter.com/cameroncodes">Peter</a>.</p>
 
 		</footer>
 	</div><!-- end .wrapper -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="scripts/shine.min.js"></script>
+	<script src="scripts/jquery.flashlight.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
 </body>
 </html>

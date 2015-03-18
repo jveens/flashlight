@@ -13,35 +13,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 	transform: translateY(-50%);
 }
 
-h3 {
-	font-family: 'Didact Gothic', sans-serif;
-	font-size: 3rem;
-	text-decoration: underline;
-	line-height: 4rem;
-}
-h5 {
-	font-family: 'Didact Gothic', sans-serif;
-	font-size: 3rem;
-	color: #D8D8D8;
-	margin: 10px 0 ;
-}
-
-p {
-	font-size: 2rem;
-	font-family: 'Didact Gothic', sans-serif;
-	line-height: 3rem;
-}
-
-table {
-	font-size: 1.7rem;
-
-	th,
-	td {
-		border: 1px solid black;
-		padding: 10px;
-	}
-}
-
 html {
 	font-size: 62.5%;
 	height: 100%;
@@ -56,33 +27,107 @@ html {
 	}
 }
 
+/* ---------------------------
+	TYPOGRAPHY
+	-------------------------- */
+
+$text : 'Didact Gothic', sans-serif;
+$title : #D8D8D8;
+$altText : lighten(#4A4A4A, 20%);
+$hover : #FFD700;
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p {
+	font-family: $text;
+	color: $title;
+}
+
+h2, 
+i {
+	color: $altText;
+}
+
+h1 {
+	font-size: 16rem;
+	text-transform: lowercase;
+	letter-spacing: 3px;
+}
+
+h2, h3 {
+	font-size: 3rem;
+}
+
+h3 {
+	text-decoration: underline;
+	line-height: 4rem;
+	color: black;
+}
+
+p {
+	font-size: 2rem;
+	line-height: 3rem;
+	color: black;
+}
+
+i {
+	transition: all 0.3s;
+	&:hover {
+	opacity: 0.6;
+	transform: scale(1.2);
+	color: lighten($hover, 20%);
+	}
+}
+
+table {
+	font-size: 1.7rem;
+
+	th,
+	td {
+		border: 1px solid black;
+		padding: 10px;
+	}
+}
+
+/* ---------------------------
+	HERO SECTION
+	-------------------------- */
+
 header {
-	height: 100%;
+	min-height: auto;
 
 	.hero {
 		height: 100%;
 		text-align: left;
-		font-size: 5rem;
-		padding: 5% 22%;
-		background: #4A4A4A;
-		background-image: linear-gradient(-179deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.42) 100%);
+		padding: 5% 10%;
+		// background: #4A4A4A;
+		background-image: linear-gradient(-179deg, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0.3) 100%);
 
 		h1 {
-		position: relative;
-		top: 40%;
-		transform: translateY(-80%);
-		font-family: 'Didact Gothic', sans-serif;
-		text-transform: lowercase;
-		font-size: 152px;
-		color: #D8D8D8;
-		line-height: 184px;
-		padding-bottom: 20px;
+		margin: 10% 0 0;
+		}
+
+		h2 {
+			margin: 5px 0 45px;
+		}
+
+		i {
+			margin-right: 40px;
 		}
 	}
 }
 
+.heroText {
+	margin: 0 auto;
+	width: 80%;
+}
+
 .innerWrapper {
-	max-width: 800px;
+	max-width: 500px;
 	margin: 0 auto;
 }
 

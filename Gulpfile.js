@@ -31,7 +31,7 @@ gulp.task('browserSync', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch('scripts/**/*.js', ['jshint']);
+	// gulp.watch('scripts/**/*.js', ['jshint']);
 	gulp.watch('style/**/*.scss', ['styles']);
 	gulp.watch('**/*.html', reload);
 });
