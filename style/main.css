@@ -186,7 +186,7 @@ table {
 header {
   min-height: auto; }
   header .hero {
-    height: 100%;
+    min-height: 100vh;
     text-align: left;
     padding: 5% 10%;
     background-image: -webkit-linear-gradient(269deg, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
@@ -199,11 +199,11 @@ header {
       margin-right: 40px; }
 
 .heroText {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   width: 80%; }
 
 .innerWrapper {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto; }
 
 .code {
