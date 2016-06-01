@@ -81,8 +81,8 @@
   display: none; }
 
 .gremlinStep {
-  -webkit-animation: walkLeft .2s steps(2) infinite;
-  background: url('../images/gremlin-sprite1x.png') 0 0;
+  -webkit-animation: walkLeft 0.2s steps(2) infinite;
+  background: url("../images/gremlin-sprite1x.png") 0 0;
   width: 108px;
   height: 96px; }
 
@@ -101,7 +101,7 @@
 .gremlinSurprise {
   width: 108px;
   height: 96px;
-  background: url('../images/gremlin-sprite1x.png') 108px 0; }
+  background: url("../images/gremlin-sprite1x.png") 108px 0; }
 
 .paused {
   -webkit-animation-play-state: paused; }
@@ -109,27 +109,22 @@
 @-webkit-keyframes walkLeft {
   0% {
     background-position: 320px 0; }
-
   100% {
     background-position: 108px 0; } }
 
 @-webkit-keyframes moveGremlin {
   0% {
     left: -10%; }
-
   49% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg); }
-
   50% {
     left: 100%;
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg); }
-
   99% {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg); }
-
   100% {
     left: -10%;
     -webkit-transform: rotateY(0deg);

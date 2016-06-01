@@ -83,7 +83,8 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button, html input[type=button], input[type=reset], input[type=submit] {
+button, html input[type=button],
+input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -140,11 +141,18 @@ html {
 /* ---------------------------
 	TYPOGRAPHY
 	-------------------------- */
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Didact Gothic', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Didact Gothic", sans-serif;
   color: #D8D8D8; }
 
-h2, i {
+h2,
+i {
   color: #7d7d7d; }
 
 h1 {
@@ -178,7 +186,8 @@ i {
 
 table {
   font-size: 1.7rem; }
-  table th, table td {
+  table th,
+  table td {
     border: 1px solid black;
     padding: 10px; }
 
@@ -253,7 +262,7 @@ code[class*="language-"] {
 ul {
   padding: 10; }
   ul li {
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: "Didact Gothic", sans-serif;
     font-size: 2rem;
     font-weight: 200;
     padding: 5px; }
